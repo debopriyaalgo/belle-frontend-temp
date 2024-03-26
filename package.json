@@ -4,9 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "run": "vite",
-    "build": "vite build",
+    "build": "rm -r _static 2>/dev/null; node main.jsx; vite build",
+    "start": "node main.jsx; serve -s _static -l tcp://0.0.0.0:$PORT -n",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
